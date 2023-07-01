@@ -1,0 +1,60 @@
+/* Employee.css */
+
+/* Employee.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300vh;
+  background-color: #f5f5f5;
+}
+
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Add this line to center the table horizontally */
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 30px;
+  margin-top: 100px;
+}
+
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+thead {
+  background-color: #f1f1f1;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #e8e8e8;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
