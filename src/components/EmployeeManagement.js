@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './Navbar2';
 const EmployeeManagement = () => {
-  
+
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -47,41 +48,45 @@ const EmployeeManagement = () => {
       });
   };
 
-    return (
-        
-        
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Employee Name</th>
-                        <th>Employee Email</th>
-                        <th>Employee Mobile Number</th>                        
-                        <th>Role</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {users.map((user) => (
-                        <tr key={user._id}>
-                            <td>{user.name}</td>
-                            <td>{user.email}</td>
-                            <td>{user.mobile}</td>
-                            <td>{user.work}</td>
-                            <td>
-                                {user.confirmation !== 'Yes' && (
-                                    <>
-                                        <button onClick={() => handleConfirmationUpdate(user._id, 'Yes')}>Yes</button>
-                                        <button onClick={() => handleConfirmationUpdate(user._id, 'No')}>No</button>
-                                    </>
-                                )}
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-            </table>
-        </div>
-    )
+  return (
+
+    <Router>
+      <header>
+        <Navbar />
+      </header>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Employee Name</th>
+              <th>Employee Email</th>
+              <th>Employee Mobile Number</th>
+              <th>Role</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr key={user._id}>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+                <td>{user.mobile}</td>
+                <td>{user.work}</td>
+                <td>
+                  {user.confirmation !== 'Yes' && (
+                    <>
+                      <button onClick={() => handleConfirmationUpdate(user._id, 'Yes')}>Yes</button>
+                      <button onClick={() => handleConfirmationUpdate(user._id, 'No')}>No</button>
+                    </>
+                  )}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </Router>
+  )
 }
 
 export default EmployeeManagement

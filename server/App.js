@@ -51,6 +51,8 @@ app.post('/Registration', async (req, res) => {
 
 })
 
+
+
 //For login page
 app.post("/Login", async (req, res) => {
 
@@ -67,6 +69,39 @@ app.post("/Login", async (req, res) => {
     res.json("fail");
   }
 });
+
+app.post('/checkEmail', async (req, res) => {
+  const { email } = req.body;
+
+  try {
+    const existingUser = await User.findOne({ email });
+
+    if (existingUser) {
+      return res.json({ exists: true });
+    } else {
+      return res.json({ exists: false });
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    return res.status(500).json({ error: 'Server error' });
+  }
+});
+app.post('/checkMobile', async (req, res) => {
+  const { mobile } = req.body;
+
+  try {
+    const existingUser = await User.findOne({ mobile });
+    if (existingUser) {
+      res.json({ exists: true });
+    } else {
+      res.json({ exists: false });
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ error: 'Server error' });
+  }
+});
+
 
 //For administrator page
 app.post('/Administrator', (req, res) => {

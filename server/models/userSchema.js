@@ -13,6 +13,12 @@ const userSchema = new mongoose.Schema({
   mobile: {
     type: String,
     required: true,
+    validate: {
+      validator: function (v) {
+        return v.length === 10;
+      },
+      message: props => `${props.value} is not a valid 10-digit mobile number!`
+    }
   },
   work: {
     type: String,
@@ -24,7 +30,7 @@ const userSchema = new mongoose.Schema({
   },
   confirmation: {
     type: String,
-    enum: ['Yes','No'],
+    enum: ['Yes', 'No'],
     default: 'No'
   },
   tokens: [

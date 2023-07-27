@@ -2,6 +2,9 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './Administrator.css';
 import { useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './Navbar2';
+
 
 function AdministratorPage() {
 
@@ -22,6 +25,10 @@ function AdministratorPage() {
 
   return (
     <>
+    <Router>
+      <header>
+        <Navbar />
+      </header>
       <div className="sidebar">
         <button class="btn2" onClick={handleAddAsset}> Add Asset
         </button>
@@ -44,6 +51,7 @@ function AdministratorPage() {
           <p class="description">{assetsLeft} </p>
         </div>
       </div>
+      </Router>
     </>
   );
 }

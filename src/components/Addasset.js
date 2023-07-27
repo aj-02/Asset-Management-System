@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './Addasset.css';
-
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './Navbar2';
 const Addasset = () => {
     
     const [asset, setAsset] = useState({
@@ -53,7 +54,10 @@ const Addasset = () => {
 
     return (
 
-
+        <Router>
+      <header>
+        <Navbar />
+      </header>
         <div className="">
             <div className="card">
                 <h2>Add Asset</h2>
@@ -109,6 +113,7 @@ const Addasset = () => {
                 </form>
             </div>
         </div>
+        </Router>
     )
 }
 

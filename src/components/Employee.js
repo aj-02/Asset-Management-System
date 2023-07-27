@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './Employee.css'
+import './Employee.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Navbar from './Navbar2';
 
 const AssetList = () => {
   
@@ -46,6 +48,10 @@ const AssetList = () => {
   };
 
   return (
+    <Router>
+      <header>
+        <Navbar />
+      </header>
     <div>
       <table>
         <thead>
@@ -85,6 +91,7 @@ const AssetList = () => {
 
       </table>
     </div>
+    </Router>
   );
 };
 
