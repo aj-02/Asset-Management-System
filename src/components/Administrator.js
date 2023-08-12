@@ -11,11 +11,11 @@ function AdministratorPage() {
   const history = useHistory();
 
   const handleAddAsset = () => {
-    history.push('/Addasset');
+    history.push('/Administrator/Addasset');
   };
 
   const handleEmployeeManagement = () => {
-    history.push('/EmployeeManagement');
+    history.push('/Administrator/EmployeeManagement');
   };
 
   // Dummy data

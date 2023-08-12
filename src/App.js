@@ -17,9 +17,9 @@ export default function App() {
         <Route exact path="/Registration" component={Registration} />
         <Route exact path="/Administrator" component={Administrator} />
         <Route exact path="/Employee" component={Employee} />
-        <Redirect to="/login" />
-        <Route exact path="/Addasset" component={Addasset} />
-        <Route exact path="/EmployeeManagement" component={EmployeeManagement} />
+        {/* <Redirect to="/login" /> */}
+        <Route exact path="/Administrator/Addasset" component={Addasset} />
+        <Route exact path="/Administrator/EmployeeManagement" component={EmployeeManagement} />
       </Switch>
     </Router>
   );
