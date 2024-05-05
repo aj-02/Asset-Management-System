@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Asset Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+Welcome to the Asset Management System! This application is built using the MERN stack (MongoDB, Express.js, React.js, Node.js) to efficiently manage and access data related to various assets within an organization. Whether you're tracking equipment, facilities, or other resources, this system provides a comprehensive solution for asset management needs.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **User Authentication**: Secure login and registration system to authenticate users and manage access to asset data.
+- **Administrator Control**: Administrators have access to approve or reject user registrations. Rejected users cannot access the system for security purposes.
+- **Dashboard**: Visual representation of asset data with interactive charts and graphs for easy analysis.
+- **Search and Filter**: Efficient search and filtering capabilities to quickly locate specific assets based on various criteria.
+- **Mobile Compatibility**: Responsive design for seamless access to asset data from desktops, tablets, and mobile devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To set up the Asset Management System on your local machine:
 
-### `npm test`
+1. Clone this repository to your local environment.
+2. Install dependencies for both the frontend and backend using `npm install`.
+3. Configure the MongoDB connection string in the backend `.env` file.
+4. Run the backend server using `npm start`.
+5. Navigate to the `client` directory and start the frontend development server using `npm start`.
+6. Access the application in your web browser at `http://localhost:3000`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **Frontend**: React.js, HTML5, CSS3, JavaScript
+- **Backend**: Node.js, Express.js, MongoDB
+- **Authentication**: JSON Web Tokens (JWT), bcrypt.js
+- **Data Visualization**: Chart.js
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Home
+![Home](https://github.com/aj-02/Asset-Management-System/assets/82252072/cdc23b28-6c30-418d-b590-f75e6b16a77e)
 
-### `npm run eject`
+### Login
+![Login](https://github.com/aj-02/Asset-Management-System/assets/82252072/ce356d6b-b28c-4a21-9135-27b03b99d275)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Register
+![Register](https://github.com/aj-02/Asset-Management-System/assets/82252072/e9ba721e-68e8-4092-8cbd-98c52b475734)
